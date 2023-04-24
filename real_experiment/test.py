@@ -11,7 +11,7 @@ os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 parser = argparse.ArgumentParser(description="PyTorch HSIFUSION")
-parser.add_argument('--data_path', default="../datasets/real_dataset/measurement/", type=str,help='path of data')
+parser.add_argument('--data_path', default="../datasets/real_dataset/Measurements/", type=str,help='path of data')
 parser.add_argument('--mask_path', default="../datasets/real_dataset/real_mask/mask.mat", type=str,help='path of mask')
 parser.add_argument('--save_path', default="./exp_test/", type=str,help='path of test output')
 parser.add_argument("--size", default=660, type=int, help='the size of trainset image')
