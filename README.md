@@ -1,18 +1,22 @@
 # MFMLP
 This is the codes of Multu-stage Fusion MLP for Compressive Spectral Imaging
+
 ## Contents
-1. [Comparison with State-of-the-art Methods](#Comparison with State-of-the-art Methods)
+
+1. [Comparison with State-of-the-art Methods](# Comparison with State-of-the-art Methods)
 2. [Architecture](#Architecture)
 3. [Dataset](#Dataset)
 4. [Simulation Experiement](#Simulation Experiement)
 5. [Real Experiement](#Real Experiement)
 6. [Acknowledgements](#Acknowledgements)
 7. [Contact](#Contact)
+
 ## 1. Comparison with State-of-the-art Methods
 <p align="center">
 <img src="Images/comparison.png" width="600">
 </p>
 Fig. 1 PSNR-Params-FLOPs comparisons of our MFMLP and SOTA methods. The vertical axis is PSNR(dB), the horizontal axis is FLOPs(G), and the circle area is Params(M).
+
 ## 2. Architecture
 <p align="center">
 <img src="Images/architecture.png" width="900">
@@ -24,6 +28,7 @@ Fig. 2 The architecture of MFMLP with K stages(iterations).
 Fig. 3 The overall architecture of MDDP. (a) MDDP adopts a U-shape structure. The green blocks are the input features of the kth stage, and also the output features of the (k − 1)th stage; the orange blocks are the output features of the kth stage, and also the input features of the (k + 1)th stage. (b)
 SSMLP is composed of a Spatial Projection, a Spectral Projection, an input embedding, an output embedding, and two layer normalization. (c) Components
 of Spectral Projection. (d) Components of Spatial Projection
+
 ## 3. Dataset
 Download cave_1024_28 ([Baidu Disk](https://pan.baidu.com/s/1X_uXxgyO-mslnCTn4ioyNQ), code: `fo0q` | [One Drive](https://bupteducn-my.sharepoint.com/:f:/g/personal/mengziyi_bupt_edu_cn/EmNAsycFKNNNgHfV9Kib4osB7OD4OSu-Gu6Qnyy5PweG0A?e=5NrM6S)),
 CAVE_512_28 ([Baidu Disk](https://pan.baidu.com/s/1ue26weBAbn61a7hyT9CDkg), code: `ixoe` | [One Drive](https://mailstsinghuaeducn-my.sharepoint.com/:f:/g/personal/lin-j21_mails_tsinghua_edu_cn/EjhS1U_F7I1PjjjtjKNtUF8BJdsqZ6BSMag_grUfzsTABA?e=sOpwm4)),
