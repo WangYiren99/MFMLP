@@ -29,8 +29,8 @@ test_data = LoadTest(opt.test_path)
 # saving path
 date_time = str(datetime.datetime.now())
 date_time = time2file_name(date_time)
-result_path = opt.outf + date_time + '/result/'
-model_path = opt.outf + date_time + '/model/'
+result_path = opt.out_train + date_time + '/result/'
+model_path = opt.out_train + date_time + '/model/'
 if not os.path.exists(result_path):
     os.makedirs(result_path)
 if not os.path.exists(model_path):

@@ -14,11 +14,12 @@ parser.add_argument('--data_path_CAVE', default="../datasets/real_dataset/cave_5
                         help='path of data')
 parser.add_argument('--data_path_KAIST', default="../datasets/real_dataset/KAIST_CVPR2021", type=str,
                     help='path of data')
-parser.add_argument('--mask_path', default="../datasets/real_dataset/mask/mask.mat", type=str,
+parser.add_argument('--mask_path', default="../datasets/real_dataset/real_mask/mask.mat", type=str,
                     help='path of mask')
 
 # Saving specifications
-parser.add_argument('--outf', type=str, default='./exp/mfmlp_2stg/', help='saving_path')
+parser.add_argument('--out_train', type=str, default='./exp_train/mfmlp_2stg/', help='saving_path')
+
 
 # Model specifications
 parser.add_argument('--method', type=str, default='mfmlp_2stg', help='method name')

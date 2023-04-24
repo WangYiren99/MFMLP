@@ -12,7 +12,8 @@ parser.add_argument("--gpu_id", type=str, default='0')
 parser.add_argument('--data_root', type=str, default='../datasets/simulation_dataset/', help='dataset directory')
 
 # Saving specifications
-parser.add_argument('--outf', type=str, default='./exp/mfmlp_2stg/', help='saving_path')
+parser.add_argument('--out_train', type=str, default='./exp_train/mfmlp_2stg/', help='saving path for training')
+parser.add_argument('--out_test', type=str, default='./exp_test/mfmlp_2stg/', help='saving path for testing')
 
 # Model specifications
 parser.add_argument('--method', type=str, default='mfmlp_2stg', help='method name')
@@ -30,15 +31,15 @@ parser.add_argument("--milestones", type=int, default=[50,100,150,200,250], help
 parser.add_argument("--gamma", type=float, default=0.5, help='learning rate decay for MultiStepLR')
 parser.add_argument("--epoch_sam_num", type=int, default=5000, help='the number of samples per epoch')
 parser.add_argument("--learning_rate", type=float, default=0.0004)
-parser.add_argument('--resume',type=bool,default=False,help:'Continue training from the last saved model') 
+parser.add_argument('--resume',type=bool,default=False,help='Continue training from the last saved model') 
 
 opt = parser.parse_args()
 template.set_template(opt)
 
 # dataset
 opt.data_path = f"{opt.data_root}/cave_1024_28/"
-opt.mask_path = f"{opt.data_root}/mask/"
-opt.test_path = f"{opt.data_root}/testing_10KAIST/"
+opt.mask_path = f"{opt.data_root}/simu_mask/"
+opt.test_path = f"{opt.data_root}/KAIST_10/"
 
 for arg in vars(opt):
     if vars(opt)[arg] == 'True':

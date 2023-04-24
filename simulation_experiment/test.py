@@ -7,7 +7,7 @@ import numpy as np
 from option import opt
 
 os.environ["CUDA_DEVICE_ORDER"] = 'PCI_BUS_ID'
-os.environ["CUDA_VISIBLE_DEVICES"] = '6'
+os.environ["CUDA_VISIBLE_DEVICES"] = 'opt.gpu_id'
 torch.backends.cudnn.enabled = True
 torch.backends.cudnn.benchmark = True
 if not torch.cuda.is_available():
@@ -16,8 +16,8 @@ if not torch.cuda.is_available():
 # Intialize mask
 mask3d_batch, input_mask = init_mask(opt.mask_path, opt.input_mask, 10)
 
-if not os.path.exists(opt.outf):
-    os.makedirs(opt.outf)
+if not os.path.exists(opt.out_train):
+    os.makedirs(opt.out_train)
 
 
 def torch_psnr_meas(img, ref):  # input [256,310]
@@ -53,7 +53,7 @@ def main():
     pred, truth,psnr_list, ssim_list, psnr_mean, ssim_mean = test(model)
     name = '{}_{:.2f}_{:.3f}'.format(opt.method, psnr_mean, ssim_mean) + '.mat'
     print(f'Save reconstructed HSIs as {name}.')
-    scio.savemat(name, {'truth': truth, 'pred': pred})
+    #scio.savemat(name, {'truth': truth, 'pred': pred})
     scio.savemat(name, {'truth': truth, 'pred': pred, 'psnr_list': psnr_list, 'ssim_list': ssim_list})
 
 if __name__ == '__main__':

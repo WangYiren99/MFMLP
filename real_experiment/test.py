@@ -12,7 +12,8 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 parser = argparse.ArgumentParser(description="PyTorch HSIFUSION")
 parser.add_argument('--data_path', default="../datasets/real_dataset/measurement/", type=str,help='path of data')
-parser.add_argument('--mask_path', default="../datasets/real_dataset/mask/mask.mat", type=str,help='path of mask')
+parser.add_argument('--mask_path', default="../datasets/real_dataset/real_mask/mask.mat", type=str,help='path of mask')
+parser.add_argument('--save_path', default="./exp_test/", type=str,help='path of test output')
 parser.add_argument("--size", default=660, type=int, help='the size of trainset image')
 parser.add_argument("--trainset_num", default=2000, type=int, help='total number of trainset')
 parser.add_argument("--testset_num", default=5, type=int, help='total number of testset')
@@ -56,7 +57,7 @@ model = model.eval()
 model = dataparallel(model, 1)
 psnr_total = 0
 k = 0
-save_path='./'
+
 for j in range(1):
     with torch.no_grad():
         meas = HR_HSI[:,:,j]

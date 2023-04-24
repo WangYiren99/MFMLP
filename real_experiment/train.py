@@ -27,9 +27,9 @@ KAIST = prepare_data_KAIST(opt.data_path_KAIST, 30)
 # saving path
 date_time = str(datetime.datetime.now())
 date_time = time2file_name(date_time)
-opt.outf = os.path.join(opt.outf, date_time)
-if not os.path.exists(opt.outf):
-    os.makedirs(opt.outf)
+opt.out_train = os.path.join(opt.out_train, date_time)
+if not os.path.exists(opt.out_train):
+    os.makedirs(opt.out_train)
 
 # model
 
@@ -96,5 +96,5 @@ if __name__ == "__main__":
         elapsed_time = time.time() - start_time
         print('epcoh = %4d , loss = %.10f , time = %4.2f s' % (epoch + 1, epoch_loss / len(Dataset), elapsed_time))
         # if epoch%5 == 0:
-        #     CheckPoint(model, epoch, os.path.join(opt.outf, 'model_%03d.pth' % (epoch + 1)),optimizer,scheduler)
-        torch.save(model, os.path.join(opt.outf, 'model_%03d.pth' % (epoch + 1)))
+        #     CheckPoint(model, epoch, os.path.join(opt.out_train 'model_%03d.pth' % (epoch + 1)),optimizer,scheduler)
+        torch.save(model, os.path.join(opt.out_train, 'model_%03d.pth' % (epoch + 1)))
