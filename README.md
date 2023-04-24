@@ -11,7 +11,7 @@ This is the codes of Multu-stage Fusion MLP for Compressive Spectral Imaging
 6. [Acknowledgements](#Acknowledgements)
 7. [Contact](#Contact)
 
-## 1. Comparison with State-of-the-art Methods
+## 1. Comparison
 <p align="center">
 <img src="Images/comparison.png" width="600">
 </p>
