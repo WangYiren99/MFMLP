@@ -13,17 +13,17 @@ This is the codes of Multu-stage Fusion MLP for Compressive Spectral Imaging
 
 ## 1. Comparison
 <p align="center">
-<img src="Images/comparison.png" width="600">
+<img src="Images/comparison.png" width="500">
 </p>
 Fig. 1 PSNR-Params-FLOPs comparisons of our MFMLP and SOTA methods. The vertical axis is PSNR(dB), the horizontal axis is FLOPs(G), and the circle area is Params(M).
 
 ## 2. Architecture
 <p align="center">
-<img src="Images/architecture.png" width="900">
+<img src="Images/architecture.png" width="600">
 </p>
 Fig. 2 The architecture of MFMLP with K stages(iterations).
 <p align="center">
-<img src="Images/MDDP.png" width="900">
+<img src="Images/MDDP.png" width="600">
 </p>
 Fig. 3 The overall architecture of MDDP. (a) MDDP adopts a U-shape structure. The green blocks are the input features of the kth stage, and also the output features of the (k − 1)th stage; the orange blocks are the output features of the kth stage, and also the input features of the (k + 1)th stage. (b)
 SSMLP is composed of a Spatial Projection, a Spectral Projection, an input embedding, an output embedding, and two layer normalization. (c) Components
