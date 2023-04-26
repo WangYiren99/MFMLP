@@ -7,7 +7,7 @@ import numpy as np
 from option import opt
 
 os.environ["CUDA_DEVICE_ORDER"] = 'PCI_BUS_ID'
-os.environ["CUDA_VISIBLE_DEVICES"] = 'opt.gpu_id'
+os.environ["CUDA_VISIBLE_DEVICES"] = opt.gpu_id
 torch.backends.cudnn.enabled = True
 torch.backends.cudnn.benchmark = True
 if not torch.cuda.is_available():
