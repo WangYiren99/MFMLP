@@ -49,7 +49,7 @@ def test(model):
 
 def main():
     # model
-    model = model_generator(opt.method,'model.pth').cuda()
+    model = model_generator(opt.method,opt.pretrained_model_path).cuda()
     pred, truth,psnr_list, ssim_list, psnr_mean, ssim_mean = test(model)
     name = '{}_{:.2f}_{:.3f}'.format(opt.method, psnr_mean, ssim_mean) + '.mat'
     print(f'Save reconstructed HSIs as {name}.')
