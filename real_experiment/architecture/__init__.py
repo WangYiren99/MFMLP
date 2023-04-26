@@ -6,6 +6,8 @@ def model_generator(method,pretrained_model_path):
         model=MFMLP(stage=2,dim=28,depth=2,num_blocks=[1,1,1]).cuda()
     elif method in['mfmlp_5stg']:
         model=MFMLP(stage=5,dim=28,depth=2,num_blocks=[1,1,1]).cuda()
+    elif method in['mfmlp_9stg']:
+        model=MFMLP(stage=9,dim=28,depth=2,num_blocks=[1,1,1]).cuda()
     elif method in['mfmlp_11stg']:
         model=MFMLP(stage=11,dim=28,depth=2,num_blocks=[1,1,1]).cuda()
 
