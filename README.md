@@ -23,11 +23,10 @@ Fig. 1 PSNR-Params-FLOPs comparisons of our MFMLP and SOTA methods. The vertical
 </p>
 Fig. 2 The architecture of MFMLP with K stages(iterations).
 
-<img src="Images/MDDP.png" width="600"><img src="Images/cyclefc.png" width="350">
-
-Fig. 3 The overall architecture of MDDP. (a) MDDP adopts a U-shape structure. The green blocks are the input features of the kth stage, and also the output features of the (k − 1)th stage; the orange blocks are the output features of the kth stage, and also the input features of the (k + 1)th stage. (b)
-SSMLP is composed of a Spatial Projection, a Spectral Projection, an input embedding, an output embedding, and two layer normalization. (c) Components
-of Spectral Projection. (d) Components of Spatial Projection
+<p align="center">
+<img src="Images/MDDP.png" width="600">
+</p>
+Fig. 3 The overall architecture of MDDP. (a) MDDP adopts a U-shape structure. The green blocks are the input features of the kth stage, and also the output features of the (k − 1)th stage; the orange blocks are the output features of the kth stage, and also the input features of the (k + 1)th stage. (b) SSMLP is composed of a Spatial Projection, a Spectral Projection, an input embedding, an output embedding, and two layer normalization. (c) Components of Spectral Projection. (d) Components of Spatial Projection
 
 ## 3. Dataset
 - cave_1024_28 ([Baidu Disk](https://pan.baidu.com/s/1X_uXxgyO-mslnCTn4ioyNQ), code: `fo0q` | [One Drive](https://bupteducn-my.sharepoint.com/:f:/g/personal/mengziyi_bupt_edu_cn/EmNAsycFKNNNgHfV9Kib4osB7OD4OSu-Gu6Qnyy5PweG0A?e=5NrM6S)),
@@ -92,7 +91,7 @@ The training log, trained model, and reconstrcuted HSI will be available in `MFM
 
 ### 4.2　Testing	
 
-Download the pretrained model zoo from ([Google Drive](https://drive.google.com/drive/folders/1zgB7jHqTzY1bjCSzdX4lKQEGyK3bpWIx?usp=sharing) / [Baidu Disk](https://pan.baidu.com/s/1CH4uq_NZPpo5ra2tFzAdfQ?pwd=mst1), code: `mst1`) 
+Download the pretrained model zoo from ([Google Drive](https://drive.google.com/drive/folders/1eysWiaCVdBnn0GOPylUFNMQbfjO-xJPM?usp=share_link) / [Baidu Disk]())
 
 Run the following command to test the model on the simulation dataset.
 
@@ -104,6 +103,7 @@ python test.py  --out_test ./exp_test/mfmlp_2stg/ --method mfmlp_2stg --pretrain
 ```
 
 - The reconstrcuted HSIs and the corresponded PSNR and SSIM will be output into `MFMLP/simulation_experiment/exp_test/`  
+Download the simulation results from ([Google Drive](https://drive.google.com/drive/folders/1jVVDKIajKdqNAetqzA-pa8oTE4cXhXNm?usp=share_link) / [Baidu Disk]())
 
 - #### Evaluating the Params and FLOPS of models
 
