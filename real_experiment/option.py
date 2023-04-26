@@ -10,7 +10,7 @@ parser.add_argument("--gpu_id", type=str, default='0')
 
 # Data specifications
 parser.add_argument('--data_root', type=str, default='../datasets/real_dataset/', help='dataset directory')
-parser.add_argument('--data_path_CAVE', default="../datasets/real_dataset/cave_512_28/", type=str,
+parser.add_argument('--data_path_CAVE', default="../datasets/real_dataset/CAVE_512_28/", type=str,
                         help='path of data')
 parser.add_argument('--data_path_KAIST', default="../datasets/real_dataset/KAIST_CVPR2021", type=str,
                     help='path of data')
