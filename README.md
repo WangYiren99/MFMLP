@@ -91,7 +91,7 @@ The training log, trained model, and reconstrcuted HSI will be available in `MFM
 
 ### 4.2　Testing	
 
-Download the pretrained model zoo from ([Google Drive](https://drive.google.com/drive/folders/1eysWiaCVdBnn0GOPylUFNMQbfjO-xJPM?usp=share_link) / [Baidu Disk]())
+Download the pretrained model zoo from ([Google Drive](https://drive.google.com/drive/folders/1eysWiaCVdBnn0GOPylUFNMQbfjO-xJPM?usp=share_link) / [Baidu Disk](https://pan.baidu.com/s/1jF_wh_rlsEnV6wB2ra3cUw), code:"zy10")
 
 Run the following command to test the model on the simulation dataset.
 
@@ -103,7 +103,7 @@ python test.py  --out_test ./exp_test/mfmlp_2stg/ --method mfmlp_2stg --pretrain
 ```
 
 - The reconstrcuted HSIs and the corresponded PSNR and SSIM will be output into `MFMLP/simulation_experiment/exp_test/`  
-Download the simulation results from ([Google Drive](https://drive.google.com/drive/folders/1jVVDKIajKdqNAetqzA-pa8oTE4cXhXNm?usp=share_link) / [Baidu Disk]())
+Download the simulation results from ([Google Drive](https://drive.google.com/drive/folders/1jVVDKIajKdqNAetqzA-pa8oTE4cXhXNm?usp=share_link) / [Baidu Disk](https://pan.baidu.com/s/1NYfCOopHmoP0AKvVYygHpA), code:"8aqk")
 
 - #### Evaluating the Params and FLOPS of models
 
