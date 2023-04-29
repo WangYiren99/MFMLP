@@ -1,5 +1,5 @@
 # MFMLP
-This is the codes of Multu-stage Fusion MLP for Compressive Spectral Imaging
+These are the codes of Multu-stage Fusion MLP for Compressive Spectral Imaging
 
 ## Contents
 
@@ -22,6 +22,7 @@ Fig. 1 PSNR-Params-FLOPs comparisons of our MFMLP and SOTA methods. The vertical
 <img src="Images/architecture.png" width="600">
 </p>
 Fig. 2 The architecture of MFMLP with K stages(iterations).
+
 
 <p align="center">
 <img src="Images/MDDP.png" width="600">
